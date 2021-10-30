@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       {local !== {} ? (
         local.email === "admin@jobhunt.com" && local.password === "admin123" ? (
-          <Findjobs />
+          <Findjobs value={{ setLocal }} />
         ) : (
           <Signin value={{ setLocal }} />
         )

@@ -24,7 +24,7 @@ const reducer = (state, action) => {
   }
   return state;
 };
-export default function Findjobs() {
+export default function Findjobs(props) {
   const [list, dispatch] = useReducer(reducer, []);
   const [search, setSearch] = useState("");
   const [type, setType] = useState("find");
@@ -51,7 +51,10 @@ export default function Findjobs() {
       dispatch({ type: "add", value: all });
     }
   }, [location]);
-  console.log(list);
+  const signout = () => {
+    localStorage.clear();
+    props.value.setLocal({});
+  };
   return (
     <div>
       <div className="container-fluid" id={Styles.container}>
@@ -88,7 +91,9 @@ export default function Findjobs() {
               </div>
             </React.Fragment>
           )}
-          <div id={Styles.signout}>Sign Out</div>
+          <div id={Styles.signout} onClick={signout}>
+            Sign Out
+          </div>
         </div>
         {type === "find" ? <Joblist /> : <Postjob />}
       </div>
