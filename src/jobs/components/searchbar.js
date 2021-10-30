@@ -5,16 +5,7 @@ export default function Searchbar(props) {
     <div id={Styles.container}>
       <div id={Styles.box}>
         <div id={Styles.contain}>
-          <i
-            id={Styles.icon}
-            className="fas fa-search"
-            onClick={() => {
-              props.value.dispatch({
-                type: "search",
-                value: props.value.search,
-              });
-            }}
-          ></i>
+          <i id={Styles.icon} className="fas fa-search"></i>
           <input
             type="text"
             id={Styles.text}
@@ -38,7 +29,17 @@ export default function Searchbar(props) {
             <option value="Berlin, Germany">Berlin, Germany</option>
           </select>
         </div>
-        <button id={Styles.button}>Search</button>
+        <button
+          id={Styles.button}
+          onClick={() => {
+            props.value.dispatch({
+              type: "search",
+              value: props.value.search,
+            });
+          }}
+        >
+          Search
+        </button>
       </div>
     </div>
   );
