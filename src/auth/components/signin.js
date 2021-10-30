@@ -1,6 +1,6 @@
 import Styles from "../styles/signin.module.css";
 import { useState } from "react";
-export default function Signin() {
+export default function Signin(props) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
@@ -9,6 +9,10 @@ export default function Signin() {
     if (email === "admin@jobhunt.com" && password === "admin123") {
       localStorage.setItem("email", email);
       localStorage.setItem("password", password);
+      let obj = {};
+      obj["email"] = email;
+      obj["password"] = password;
+      props.value.setLocal(obj);
     } else {
       alert("enter correct details");
     }

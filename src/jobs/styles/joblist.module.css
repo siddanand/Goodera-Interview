@@ -1,0 +1,17 @@
+#heading{
+  font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 30px;
+color: #FFFFFF;
+margin-left: 20px;
+margin-top: 40px;
+}
+#descr{
+  margin-left: 20px;
+  font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+color: #FFFFFF;
+}

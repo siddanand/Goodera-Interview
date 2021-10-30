@@ -1,0 +1,50 @@
+#container{
+  background: linear-gradient(274.83deg, #5DB0DF 0.58%, #5D7ADF 74.3%);
+  min-height: 40vh;
+}
+#nav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#hunt{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin: 10px;
+}
+#post {
+  flex-grow:1;
+  font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+margin: 10px;
+padding: 3px;
+cursor: pointer;
+
+}
+#find{
+  font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+margin: 10px;
+padding: 3px;
+cursor: pointer;
+
+}
+#signout{
+  font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+margin: 13px;
+cursor: pointer;
+}
