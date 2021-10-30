@@ -93,8 +93,12 @@ export default function Findjobs() {
         {type === "find" ? <Joblist /> : <Postjob />}
       </div>
       <div class="container-fluid">
-        <Searchbar value={{ search, setSearch, dispatch, setLocation }} />
-        <List value={{ list }} />
+        {type === "find" ? (
+          <div>
+            <Searchbar value={{ search, setSearch, dispatch, setLocation }} />
+            <List value={{ list }} />
+          </div>
+        ) : null}
       </div>
     </div>
   );
