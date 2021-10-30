@@ -6,7 +6,6 @@ export default function List(props) {
   const truncate = (str) => {
     return str.length > 10 ? str.substring(0, 100) + "..." : str;
   };
-  console.log(current);
   return (
     <div>
       <div class="modal fade" id="myModal" role="dialog">
